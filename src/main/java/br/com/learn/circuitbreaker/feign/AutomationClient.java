@@ -21,16 +21,10 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
     url = "http://localhost:8081",
     fallback = AutomationSessionClientFallback.class
     )
-
 public interface AutomationClient {
 
   @CircuitBreaker(name = "automationCB")
   @GetMapping(path = "/{patientId}", produces = MediaType.APPLICATION_JSON_VALUE)
   List<AutomationDTO> findAutomationDetail(@PathVariable Long patientId);
-
-
-
-
-
   
 }

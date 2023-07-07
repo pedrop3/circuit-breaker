@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import br.com.learn.circuitbreaker.controller.AutomationDTO;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @Component
 public class AutomationSessionClientFallback implements AutomationClient{

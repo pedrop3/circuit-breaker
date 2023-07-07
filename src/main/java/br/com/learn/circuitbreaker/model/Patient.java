@@ -8,5 +8,5 @@ import lombok.Data;
 public class Patient {
 
 	private Long id;
-	private String nome;
+	private String name;
 }

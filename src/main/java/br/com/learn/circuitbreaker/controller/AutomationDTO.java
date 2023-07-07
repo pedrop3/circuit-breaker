@@ -8,8 +8,6 @@ import lombok.Data;
 public class AutomationDTO {
 
 	private Long id;
-	private Integer dias;
-	private String descricao;
-
-
+	private Integer days;
+	private String description;
 }

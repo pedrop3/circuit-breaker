@@ -17,19 +17,22 @@ public class PatientService {
 
  
 
-	private static final List<Patient> PACIENTES = new ArrayList<>();
+	private static final List<Patient> PATIENTS = new ArrayList<>();
 	private static long id = 1;
 
 	//Inicializador dos statics
 	static {
-		PACIENTES.add(new Patient(id++, "Pedrão"));
-		PACIENTES.add(new Patient(id++, "Cruz"));
-		PACIENTES.add(new Patient(id++, "Brunão"));
+		PATIENTS.add(new Patient(id++, "Pedrão"));
+		PATIENTS.add(new Patient(id++, "Cruz"));
+		PATIENTS.add(new Patient(id++, "Brunão"));
 	}
 
   
 
-  public Optional<Patient> findById(Long patientId) throws Throwable {
-    return PACIENTES.stream().filter(e -> e.getId().equals(patientId)).findFirst();
+  public Optional<Patient> findById(Long patientId)  {
+    return PATIENTS
+			.stream()
+			.filter(e -> e.getId().equals(patientId))
+			.findFirst();
   }
 }

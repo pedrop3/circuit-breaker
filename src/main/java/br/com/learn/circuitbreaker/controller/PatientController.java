@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/patients")
 @RequiredArgsConstructor
-public class Controller {
+public class PatientController {
   
   private final PatientService patientService;
   private final AutomationService automationService;

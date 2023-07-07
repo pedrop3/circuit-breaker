@@ -14,7 +14,7 @@ import lombok.Data;
 public class PatientDTO {
 
 	private Long id;
-	private String nome;
+	private String NAME;
 	
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	public List<AutomationDTO> automationDetail;
@@ -22,7 +22,7 @@ public class PatientDTO {
     public static PatientDTO of(Patient patient, List<AutomationDTO> automationDetail) {
 		return new PatientDTO(
 			patient.getId(),
-			patient.getNome(),
+			patient.getName(),
 			automationDetail
 	);
     }

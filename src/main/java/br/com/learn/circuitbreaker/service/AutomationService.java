@@ -23,16 +23,11 @@ public class AutomationService {
 
         try {
             automation = automationClient.findAutomationDetail(patientId);
-
-        } catch (CallNotPermittedException e) {
-            automation = new ArrayList<>();
-            e.printStackTrace();
         }catch (Exception e) {
 			throw e;
         }
-        return automation;
 
-        
+        return automation;
     }
 
 

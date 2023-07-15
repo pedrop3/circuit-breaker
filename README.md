@@ -82,19 +82,18 @@ In order for this project to make sense, you will need to run this additional [s
 
 ### Prerequisites
 
-* Java 11
+* Java 17
 * Maven 
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/pedrop3/circuit-breaker.git
+   git clone https://github.com/pedrop3/circuit-breaker-client.git
    ```
-3. Install dependencs
+2. Install dependencs
    ```sh
    mvn clean install compile
    ```
@@ -102,8 +101,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage

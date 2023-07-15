@@ -14,7 +14,7 @@ import lombok.Data;
 public class PatientDTO {
 
 	private Long id;
-	private String NAME;
+	private String name;
 	
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	public List<AutomationDTO> automationDetail;

@@ -18,13 +18,17 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @Component
 @FeignClient(name = "autmationClient", 
-    url = "http://localhost:8081",
-    fallback = AutomationSessionClientFallback.class
+    url = "http://localhost:8081"
     )
 public interface AutomationClient {
 
-  @CircuitBreaker(name = "automationCB")
+  @CircuitBreaker(name = "automationCB", fallbackMethod = "findAutomationFallBack")
   @GetMapping(path = "/{patientId}", produces = MediaType.APPLICATION_JSON_VALUE)
   List<AutomationDTO> findAutomationDetail(@PathVariable Long patientId);
+
+
+  default List<AutomationDTO> findAutomationFallBack(Throwable throwable) {
+    return new ArrayList<>();
+  }
   
 }

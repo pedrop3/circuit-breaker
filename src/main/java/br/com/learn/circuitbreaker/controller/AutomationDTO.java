@@ -1,13 +1,5 @@
 package br.com.learn.circuitbreaker.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public record AutomationDTO(Integer days,String description) {
 
-@Data
-@AllArgsConstructor
-public class AutomationDTO {
-
-	private Long id;
-	private Integer days;
-	private String description;
 }
